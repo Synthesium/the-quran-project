@@ -3,7 +3,18 @@
     "allow": [
       "Bash(flutter analyze:*)",
       "Bash(flutter pub get:*)",
-      "WebFetch(domain:qul.tarteel.ai)"
+      "WebFetch(domain:qul.tarteel.ai)",
+      "WebFetch(domain:api.github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:api.quran.com)",
+      "Bash(unzip:*)",
+      "Bash(sqlite3:*)",
+      "WebFetch(domain:shlinfosystems.gumroad.com)",
+      "Bash(gh issue view:*)",
+      "WebFetch(domain:qurani.ai)",
+      "Bash(pkill:*)",
+      "WebFetch(domain:artofislamicpattern.com)"
     ]
   }
 }

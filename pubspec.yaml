@@ -44,6 +44,9 @@ dependencies:
   # Google Fonts for Japanese and English
   google_fonts: ^6.2.1
 
+  # HTML rendering for tafsirs
+  flutter_html: ^3.0.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
