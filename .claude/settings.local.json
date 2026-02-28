@@ -14,7 +14,10 @@
       "Bash(gh issue view:*)",
       "WebFetch(domain:qurani.ai)",
       "Bash(pkill:*)",
-      "WebFetch(domain:artofislamicpattern.com)"
+      "WebFetch(domain:artofislamicpattern.com)",
+      "Bash(adb devices:*)",
+      "Bash(LC_ALL=C grep:*)",
+      "Bash(adb shell:*)"
     ]
   }
 }
