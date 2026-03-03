@@ -17,7 +17,14 @@
       "WebFetch(domain:artofislamicpattern.com)",
       "Bash(adb devices:*)",
       "Bash(LC_ALL=C grep:*)",
-      "Bash(adb shell:*)"
+      "Bash(adb shell:*)",
+      "Bash(python3:*)",
+      "Bash(xcrun simctl:*)",
+      "Bash(flutter devices:*)",
+      "Bash(ls:*)",
+      "Bash(find:*)",
+      "Bash(npm install:*)",
+      "Bash(claude:*)"
     ]
   }
 }

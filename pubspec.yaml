@@ -1,38 +1,16 @@
 name: the_quran_project
 description: "A new Flutter project."
-# The following line prevents the package from being accidentally published to
-# pub.dev using `flutter pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: 'none'
 
-# The following defines the version and build number for your application.
-# A version number is three numbers separated by dots, like 1.2.43
-# followed by an optional build number separated by a +.
-# Both the version and the builder number may be overridden in flutter
-# build by specifying --build-name and --build-number, respectively.
-# In Android, build-name is used as versionName while build-number used as versionCode.
-# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
-# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
-# Read more about iOS versioning at
-# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-# In Windows, build-name is used as the major, minor, and patch parts
-# of the product and file versions while build-number is used as the build suffix.
 version: 1.0.0+1
 
 environment:
   sdk: ^3.11.0
 
-# Dependencies specify other packages that your package needs in order to work.
-# To automatically upgrade your package dependencies to the latest versions
-# consider running `flutter pub upgrade --major-versions`. Alternatively,
-# dependencies can be manually updated by changing the version numbers below to
-# the latest version available on pub.dev. To see which dependencies have newer
-# versions available, run `flutter pub outdated`.
 dependencies:
   flutter:
     sdk: flutter
 
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
 
   # Database
@@ -47,40 +25,640 @@ dependencies:
   # HTML rendering for tafsirs
   flutter_html: ^3.0.0
 
+  # SVG support for ornate borders
+  flutter_svg: ^2.0.10
+
+  # Settings persistence
+  shared_preferences: ^2.3.3
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  # The "flutter_lints" package below contains a set of recommended lints to
-  # encourage good coding practices. The lint set provided by the package is
-  # activated in the `analysis_options.yaml` file located at the root of your
-  # package. See that file for information about deactivating specific lint
-  # rules and activating additional ones.
   flutter_lints: ^6.0.0
 
   # Drift code generation
   drift_dev: ^2.31.0
   build_runner: ^2.11.1
 
-# For information on the generic Dart part of this file, see the
-# following page: https://dart.dev/tools/pub/pubspec
-
-# The following section is specific to Flutter packages.
 flutter:
-
-  # The following line ensures that the Material Icons font is
-  # included with your application, so that you can use the icons in
-  # the material Icons class.
   uses-material-design: true
 
   assets:
     - assets/quran.db
-
-  # An image asset can refer to one or more resolution-specific "variants", see
-  # https://flutter.dev/to/resolution-aware-images
-
-  # For details regarding adding assets from package dependencies, see
-  # https://flutter.dev/to/asset-from-package
+    - assets/naskh_app_extract/ayahinfo_1342.db
+    - assets/naskh_app_extract/quran.ar_naskh.db
+    - assets/naskh_app_extract/pages/1/
+    - assets/naskh_app_extract/pages/2/
+    - assets/naskh_app_extract/pages/3/
+    - assets/naskh_app_extract/pages/4/
+    - assets/naskh_app_extract/pages/5/
+    - assets/naskh_app_extract/pages/6/
+    - assets/naskh_app_extract/pages/7/
+    - assets/naskh_app_extract/pages/8/
+    - assets/naskh_app_extract/pages/9/
+    - assets/naskh_app_extract/pages/10/
+    - assets/naskh_app_extract/pages/11/
+    - assets/naskh_app_extract/pages/12/
+    - assets/naskh_app_extract/pages/13/
+    - assets/naskh_app_extract/pages/14/
+    - assets/naskh_app_extract/pages/15/
+    - assets/naskh_app_extract/pages/16/
+    - assets/naskh_app_extract/pages/17/
+    - assets/naskh_app_extract/pages/18/
+    - assets/naskh_app_extract/pages/19/
+    - assets/naskh_app_extract/pages/20/
+    - assets/naskh_app_extract/pages/21/
+    - assets/naskh_app_extract/pages/22/
+    - assets/naskh_app_extract/pages/23/
+    - assets/naskh_app_extract/pages/24/
+    - assets/naskh_app_extract/pages/25/
+    - assets/naskh_app_extract/pages/26/
+    - assets/naskh_app_extract/pages/27/
+    - assets/naskh_app_extract/pages/28/
+    - assets/naskh_app_extract/pages/29/
+    - assets/naskh_app_extract/pages/30/
+    - assets/naskh_app_extract/pages/31/
+    - assets/naskh_app_extract/pages/32/
+    - assets/naskh_app_extract/pages/33/
+    - assets/naskh_app_extract/pages/34/
+    - assets/naskh_app_extract/pages/35/
+    - assets/naskh_app_extract/pages/36/
+    - assets/naskh_app_extract/pages/37/
+    - assets/naskh_app_extract/pages/38/
+    - assets/naskh_app_extract/pages/39/
+    - assets/naskh_app_extract/pages/40/
+    - assets/naskh_app_extract/pages/41/
+    - assets/naskh_app_extract/pages/42/
+    - assets/naskh_app_extract/pages/43/
+    - assets/naskh_app_extract/pages/44/
+    - assets/naskh_app_extract/pages/45/
+    - assets/naskh_app_extract/pages/46/
+    - assets/naskh_app_extract/pages/47/
+    - assets/naskh_app_extract/pages/48/
+    - assets/naskh_app_extract/pages/49/
+    - assets/naskh_app_extract/pages/50/
+    - assets/naskh_app_extract/pages/51/
+    - assets/naskh_app_extract/pages/52/
+    - assets/naskh_app_extract/pages/53/
+    - assets/naskh_app_extract/pages/54/
+    - assets/naskh_app_extract/pages/55/
+    - assets/naskh_app_extract/pages/56/
+    - assets/naskh_app_extract/pages/57/
+    - assets/naskh_app_extract/pages/58/
+    - assets/naskh_app_extract/pages/59/
+    - assets/naskh_app_extract/pages/60/
+    - assets/naskh_app_extract/pages/61/
+    - assets/naskh_app_extract/pages/62/
+    - assets/naskh_app_extract/pages/63/
+    - assets/naskh_app_extract/pages/64/
+    - assets/naskh_app_extract/pages/65/
+    - assets/naskh_app_extract/pages/66/
+    - assets/naskh_app_extract/pages/67/
+    - assets/naskh_app_extract/pages/68/
+    - assets/naskh_app_extract/pages/69/
+    - assets/naskh_app_extract/pages/70/
+    - assets/naskh_app_extract/pages/71/
+    - assets/naskh_app_extract/pages/72/
+    - assets/naskh_app_extract/pages/73/
+    - assets/naskh_app_extract/pages/74/
+    - assets/naskh_app_extract/pages/75/
+    - assets/naskh_app_extract/pages/76/
+    - assets/naskh_app_extract/pages/77/
+    - assets/naskh_app_extract/pages/78/
+    - assets/naskh_app_extract/pages/79/
+    - assets/naskh_app_extract/pages/80/
+    - assets/naskh_app_extract/pages/81/
+    - assets/naskh_app_extract/pages/82/
+    - assets/naskh_app_extract/pages/83/
+    - assets/naskh_app_extract/pages/84/
+    - assets/naskh_app_extract/pages/85/
+    - assets/naskh_app_extract/pages/86/
+    - assets/naskh_app_extract/pages/87/
+    - assets/naskh_app_extract/pages/88/
+    - assets/naskh_app_extract/pages/89/
+    - assets/naskh_app_extract/pages/90/
+    - assets/naskh_app_extract/pages/91/
+    - assets/naskh_app_extract/pages/92/
+    - assets/naskh_app_extract/pages/93/
+    - assets/naskh_app_extract/pages/94/
+    - assets/naskh_app_extract/pages/95/
+    - assets/naskh_app_extract/pages/96/
+    - assets/naskh_app_extract/pages/97/
+    - assets/naskh_app_extract/pages/98/
+    - assets/naskh_app_extract/pages/99/
+    - assets/naskh_app_extract/pages/100/
+    - assets/naskh_app_extract/pages/101/
+    - assets/naskh_app_extract/pages/102/
+    - assets/naskh_app_extract/pages/103/
+    - assets/naskh_app_extract/pages/104/
+    - assets/naskh_app_extract/pages/105/
+    - assets/naskh_app_extract/pages/106/
+    - assets/naskh_app_extract/pages/107/
+    - assets/naskh_app_extract/pages/108/
+    - assets/naskh_app_extract/pages/109/
+    - assets/naskh_app_extract/pages/110/
+    - assets/naskh_app_extract/pages/111/
+    - assets/naskh_app_extract/pages/112/
+    - assets/naskh_app_extract/pages/113/
+    - assets/naskh_app_extract/pages/114/
+    - assets/naskh_app_extract/pages/115/
+    - assets/naskh_app_extract/pages/116/
+    - assets/naskh_app_extract/pages/117/
+    - assets/naskh_app_extract/pages/118/
+    - assets/naskh_app_extract/pages/119/
+    - assets/naskh_app_extract/pages/120/
+    - assets/naskh_app_extract/pages/121/
+    - assets/naskh_app_extract/pages/122/
+    - assets/naskh_app_extract/pages/123/
+    - assets/naskh_app_extract/pages/124/
+    - assets/naskh_app_extract/pages/125/
+    - assets/naskh_app_extract/pages/126/
+    - assets/naskh_app_extract/pages/127/
+    - assets/naskh_app_extract/pages/128/
+    - assets/naskh_app_extract/pages/129/
+    - assets/naskh_app_extract/pages/130/
+    - assets/naskh_app_extract/pages/131/
+    - assets/naskh_app_extract/pages/132/
+    - assets/naskh_app_extract/pages/133/
+    - assets/naskh_app_extract/pages/134/
+    - assets/naskh_app_extract/pages/135/
+    - assets/naskh_app_extract/pages/136/
+    - assets/naskh_app_extract/pages/137/
+    - assets/naskh_app_extract/pages/138/
+    - assets/naskh_app_extract/pages/139/
+    - assets/naskh_app_extract/pages/140/
+    - assets/naskh_app_extract/pages/141/
+    - assets/naskh_app_extract/pages/142/
+    - assets/naskh_app_extract/pages/143/
+    - assets/naskh_app_extract/pages/144/
+    - assets/naskh_app_extract/pages/145/
+    - assets/naskh_app_extract/pages/146/
+    - assets/naskh_app_extract/pages/147/
+    - assets/naskh_app_extract/pages/148/
+    - assets/naskh_app_extract/pages/149/
+    - assets/naskh_app_extract/pages/150/
+    - assets/naskh_app_extract/pages/151/
+    - assets/naskh_app_extract/pages/152/
+    - assets/naskh_app_extract/pages/153/
+    - assets/naskh_app_extract/pages/154/
+    - assets/naskh_app_extract/pages/155/
+    - assets/naskh_app_extract/pages/156/
+    - assets/naskh_app_extract/pages/157/
+    - assets/naskh_app_extract/pages/158/
+    - assets/naskh_app_extract/pages/159/
+    - assets/naskh_app_extract/pages/160/
+    - assets/naskh_app_extract/pages/161/
+    - assets/naskh_app_extract/pages/162/
+    - assets/naskh_app_extract/pages/163/
+    - assets/naskh_app_extract/pages/164/
+    - assets/naskh_app_extract/pages/165/
+    - assets/naskh_app_extract/pages/166/
+    - assets/naskh_app_extract/pages/167/
+    - assets/naskh_app_extract/pages/168/
+    - assets/naskh_app_extract/pages/169/
+    - assets/naskh_app_extract/pages/170/
+    - assets/naskh_app_extract/pages/171/
+    - assets/naskh_app_extract/pages/172/
+    - assets/naskh_app_extract/pages/173/
+    - assets/naskh_app_extract/pages/174/
+    - assets/naskh_app_extract/pages/175/
+    - assets/naskh_app_extract/pages/176/
+    - assets/naskh_app_extract/pages/177/
+    - assets/naskh_app_extract/pages/178/
+    - assets/naskh_app_extract/pages/179/
+    - assets/naskh_app_extract/pages/180/
+    - assets/naskh_app_extract/pages/181/
+    - assets/naskh_app_extract/pages/182/
+    - assets/naskh_app_extract/pages/183/
+    - assets/naskh_app_extract/pages/184/
+    - assets/naskh_app_extract/pages/185/
+    - assets/naskh_app_extract/pages/186/
+    - assets/naskh_app_extract/pages/187/
+    - assets/naskh_app_extract/pages/188/
+    - assets/naskh_app_extract/pages/189/
+    - assets/naskh_app_extract/pages/190/
+    - assets/naskh_app_extract/pages/191/
+    - assets/naskh_app_extract/pages/192/
+    - assets/naskh_app_extract/pages/193/
+    - assets/naskh_app_extract/pages/194/
+    - assets/naskh_app_extract/pages/195/
+    - assets/naskh_app_extract/pages/196/
+    - assets/naskh_app_extract/pages/197/
+    - assets/naskh_app_extract/pages/198/
+    - assets/naskh_app_extract/pages/199/
+    - assets/naskh_app_extract/pages/200/
+    - assets/naskh_app_extract/pages/201/
+    - assets/naskh_app_extract/pages/202/
+    - assets/naskh_app_extract/pages/203/
+    - assets/naskh_app_extract/pages/204/
+    - assets/naskh_app_extract/pages/205/
+    - assets/naskh_app_extract/pages/206/
+    - assets/naskh_app_extract/pages/207/
+    - assets/naskh_app_extract/pages/208/
+    - assets/naskh_app_extract/pages/209/
+    - assets/naskh_app_extract/pages/210/
+    - assets/naskh_app_extract/pages/211/
+    - assets/naskh_app_extract/pages/212/
+    - assets/naskh_app_extract/pages/213/
+    - assets/naskh_app_extract/pages/214/
+    - assets/naskh_app_extract/pages/215/
+    - assets/naskh_app_extract/pages/216/
+    - assets/naskh_app_extract/pages/217/
+    - assets/naskh_app_extract/pages/218/
+    - assets/naskh_app_extract/pages/219/
+    - assets/naskh_app_extract/pages/220/
+    - assets/naskh_app_extract/pages/221/
+    - assets/naskh_app_extract/pages/222/
+    - assets/naskh_app_extract/pages/223/
+    - assets/naskh_app_extract/pages/224/
+    - assets/naskh_app_extract/pages/225/
+    - assets/naskh_app_extract/pages/226/
+    - assets/naskh_app_extract/pages/227/
+    - assets/naskh_app_extract/pages/228/
+    - assets/naskh_app_extract/pages/229/
+    - assets/naskh_app_extract/pages/230/
+    - assets/naskh_app_extract/pages/231/
+    - assets/naskh_app_extract/pages/232/
+    - assets/naskh_app_extract/pages/233/
+    - assets/naskh_app_extract/pages/234/
+    - assets/naskh_app_extract/pages/235/
+    - assets/naskh_app_extract/pages/236/
+    - assets/naskh_app_extract/pages/237/
+    - assets/naskh_app_extract/pages/238/
+    - assets/naskh_app_extract/pages/239/
+    - assets/naskh_app_extract/pages/240/
+    - assets/naskh_app_extract/pages/241/
+    - assets/naskh_app_extract/pages/242/
+    - assets/naskh_app_extract/pages/243/
+    - assets/naskh_app_extract/pages/244/
+    - assets/naskh_app_extract/pages/245/
+    - assets/naskh_app_extract/pages/246/
+    - assets/naskh_app_extract/pages/247/
+    - assets/naskh_app_extract/pages/248/
+    - assets/naskh_app_extract/pages/249/
+    - assets/naskh_app_extract/pages/250/
+    - assets/naskh_app_extract/pages/251/
+    - assets/naskh_app_extract/pages/252/
+    - assets/naskh_app_extract/pages/253/
+    - assets/naskh_app_extract/pages/254/
+    - assets/naskh_app_extract/pages/255/
+    - assets/naskh_app_extract/pages/256/
+    - assets/naskh_app_extract/pages/257/
+    - assets/naskh_app_extract/pages/258/
+    - assets/naskh_app_extract/pages/259/
+    - assets/naskh_app_extract/pages/260/
+    - assets/naskh_app_extract/pages/261/
+    - assets/naskh_app_extract/pages/262/
+    - assets/naskh_app_extract/pages/263/
+    - assets/naskh_app_extract/pages/264/
+    - assets/naskh_app_extract/pages/265/
+    - assets/naskh_app_extract/pages/266/
+    - assets/naskh_app_extract/pages/267/
+    - assets/naskh_app_extract/pages/268/
+    - assets/naskh_app_extract/pages/269/
+    - assets/naskh_app_extract/pages/270/
+    - assets/naskh_app_extract/pages/271/
+    - assets/naskh_app_extract/pages/272/
+    - assets/naskh_app_extract/pages/273/
+    - assets/naskh_app_extract/pages/274/
+    - assets/naskh_app_extract/pages/275/
+    - assets/naskh_app_extract/pages/276/
+    - assets/naskh_app_extract/pages/277/
+    - assets/naskh_app_extract/pages/278/
+    - assets/naskh_app_extract/pages/279/
+    - assets/naskh_app_extract/pages/280/
+    - assets/naskh_app_extract/pages/281/
+    - assets/naskh_app_extract/pages/282/
+    - assets/naskh_app_extract/pages/283/
+    - assets/naskh_app_extract/pages/284/
+    - assets/naskh_app_extract/pages/285/
+    - assets/naskh_app_extract/pages/286/
+    - assets/naskh_app_extract/pages/287/
+    - assets/naskh_app_extract/pages/288/
+    - assets/naskh_app_extract/pages/289/
+    - assets/naskh_app_extract/pages/290/
+    - assets/naskh_app_extract/pages/291/
+    - assets/naskh_app_extract/pages/292/
+    - assets/naskh_app_extract/pages/293/
+    - assets/naskh_app_extract/pages/294/
+    - assets/naskh_app_extract/pages/295/
+    - assets/naskh_app_extract/pages/296/
+    - assets/naskh_app_extract/pages/297/
+    - assets/naskh_app_extract/pages/298/
+    - assets/naskh_app_extract/pages/299/
+    - assets/naskh_app_extract/pages/300/
+    - assets/naskh_app_extract/pages/301/
+    - assets/naskh_app_extract/pages/302/
+    - assets/naskh_app_extract/pages/303/
+    - assets/naskh_app_extract/pages/304/
+    - assets/naskh_app_extract/pages/305/
+    - assets/naskh_app_extract/pages/306/
+    - assets/naskh_app_extract/pages/307/
+    - assets/naskh_app_extract/pages/308/
+    - assets/naskh_app_extract/pages/309/
+    - assets/naskh_app_extract/pages/310/
+    - assets/naskh_app_extract/pages/311/
+    - assets/naskh_app_extract/pages/312/
+    - assets/naskh_app_extract/pages/313/
+    - assets/naskh_app_extract/pages/314/
+    - assets/naskh_app_extract/pages/315/
+    - assets/naskh_app_extract/pages/316/
+    - assets/naskh_app_extract/pages/317/
+    - assets/naskh_app_extract/pages/318/
+    - assets/naskh_app_extract/pages/319/
+    - assets/naskh_app_extract/pages/320/
+    - assets/naskh_app_extract/pages/321/
+    - assets/naskh_app_extract/pages/322/
+    - assets/naskh_app_extract/pages/323/
+    - assets/naskh_app_extract/pages/324/
+    - assets/naskh_app_extract/pages/325/
+    - assets/naskh_app_extract/pages/326/
+    - assets/naskh_app_extract/pages/327/
+    - assets/naskh_app_extract/pages/328/
+    - assets/naskh_app_extract/pages/329/
+    - assets/naskh_app_extract/pages/330/
+    - assets/naskh_app_extract/pages/331/
+    - assets/naskh_app_extract/pages/332/
+    - assets/naskh_app_extract/pages/333/
+    - assets/naskh_app_extract/pages/334/
+    - assets/naskh_app_extract/pages/335/
+    - assets/naskh_app_extract/pages/336/
+    - assets/naskh_app_extract/pages/337/
+    - assets/naskh_app_extract/pages/338/
+    - assets/naskh_app_extract/pages/339/
+    - assets/naskh_app_extract/pages/340/
+    - assets/naskh_app_extract/pages/341/
+    - assets/naskh_app_extract/pages/342/
+    - assets/naskh_app_extract/pages/343/
+    - assets/naskh_app_extract/pages/344/
+    - assets/naskh_app_extract/pages/345/
+    - assets/naskh_app_extract/pages/346/
+    - assets/naskh_app_extract/pages/347/
+    - assets/naskh_app_extract/pages/348/
+    - assets/naskh_app_extract/pages/349/
+    - assets/naskh_app_extract/pages/350/
+    - assets/naskh_app_extract/pages/351/
+    - assets/naskh_app_extract/pages/352/
+    - assets/naskh_app_extract/pages/353/
+    - assets/naskh_app_extract/pages/354/
+    - assets/naskh_app_extract/pages/355/
+    - assets/naskh_app_extract/pages/356/
+    - assets/naskh_app_extract/pages/357/
+    - assets/naskh_app_extract/pages/358/
+    - assets/naskh_app_extract/pages/359/
+    - assets/naskh_app_extract/pages/360/
+    - assets/naskh_app_extract/pages/361/
+    - assets/naskh_app_extract/pages/362/
+    - assets/naskh_app_extract/pages/363/
+    - assets/naskh_app_extract/pages/364/
+    - assets/naskh_app_extract/pages/365/
+    - assets/naskh_app_extract/pages/366/
+    - assets/naskh_app_extract/pages/367/
+    - assets/naskh_app_extract/pages/368/
+    - assets/naskh_app_extract/pages/369/
+    - assets/naskh_app_extract/pages/370/
+    - assets/naskh_app_extract/pages/371/
+    - assets/naskh_app_extract/pages/372/
+    - assets/naskh_app_extract/pages/373/
+    - assets/naskh_app_extract/pages/374/
+    - assets/naskh_app_extract/pages/375/
+    - assets/naskh_app_extract/pages/376/
+    - assets/naskh_app_extract/pages/377/
+    - assets/naskh_app_extract/pages/378/
+    - assets/naskh_app_extract/pages/379/
+    - assets/naskh_app_extract/pages/380/
+    - assets/naskh_app_extract/pages/381/
+    - assets/naskh_app_extract/pages/382/
+    - assets/naskh_app_extract/pages/383/
+    - assets/naskh_app_extract/pages/384/
+    - assets/naskh_app_extract/pages/385/
+    - assets/naskh_app_extract/pages/386/
+    - assets/naskh_app_extract/pages/387/
+    - assets/naskh_app_extract/pages/388/
+    - assets/naskh_app_extract/pages/389/
+    - assets/naskh_app_extract/pages/390/
+    - assets/naskh_app_extract/pages/391/
+    - assets/naskh_app_extract/pages/392/
+    - assets/naskh_app_extract/pages/393/
+    - assets/naskh_app_extract/pages/394/
+    - assets/naskh_app_extract/pages/395/
+    - assets/naskh_app_extract/pages/396/
+    - assets/naskh_app_extract/pages/397/
+    - assets/naskh_app_extract/pages/398/
+    - assets/naskh_app_extract/pages/399/
+    - assets/naskh_app_extract/pages/400/
+    - assets/naskh_app_extract/pages/401/
+    - assets/naskh_app_extract/pages/402/
+    - assets/naskh_app_extract/pages/403/
+    - assets/naskh_app_extract/pages/404/
+    - assets/naskh_app_extract/pages/405/
+    - assets/naskh_app_extract/pages/406/
+    - assets/naskh_app_extract/pages/407/
+    - assets/naskh_app_extract/pages/408/
+    - assets/naskh_app_extract/pages/409/
+    - assets/naskh_app_extract/pages/410/
+    - assets/naskh_app_extract/pages/411/
+    - assets/naskh_app_extract/pages/412/
+    - assets/naskh_app_extract/pages/413/
+    - assets/naskh_app_extract/pages/414/
+    - assets/naskh_app_extract/pages/415/
+    - assets/naskh_app_extract/pages/416/
+    - assets/naskh_app_extract/pages/417/
+    - assets/naskh_app_extract/pages/418/
+    - assets/naskh_app_extract/pages/419/
+    - assets/naskh_app_extract/pages/420/
+    - assets/naskh_app_extract/pages/421/
+    - assets/naskh_app_extract/pages/422/
+    - assets/naskh_app_extract/pages/423/
+    - assets/naskh_app_extract/pages/424/
+    - assets/naskh_app_extract/pages/425/
+    - assets/naskh_app_extract/pages/426/
+    - assets/naskh_app_extract/pages/427/
+    - assets/naskh_app_extract/pages/428/
+    - assets/naskh_app_extract/pages/429/
+    - assets/naskh_app_extract/pages/430/
+    - assets/naskh_app_extract/pages/431/
+    - assets/naskh_app_extract/pages/432/
+    - assets/naskh_app_extract/pages/433/
+    - assets/naskh_app_extract/pages/434/
+    - assets/naskh_app_extract/pages/435/
+    - assets/naskh_app_extract/pages/436/
+    - assets/naskh_app_extract/pages/437/
+    - assets/naskh_app_extract/pages/438/
+    - assets/naskh_app_extract/pages/439/
+    - assets/naskh_app_extract/pages/440/
+    - assets/naskh_app_extract/pages/441/
+    - assets/naskh_app_extract/pages/442/
+    - assets/naskh_app_extract/pages/443/
+    - assets/naskh_app_extract/pages/444/
+    - assets/naskh_app_extract/pages/445/
+    - assets/naskh_app_extract/pages/446/
+    - assets/naskh_app_extract/pages/447/
+    - assets/naskh_app_extract/pages/448/
+    - assets/naskh_app_extract/pages/449/
+    - assets/naskh_app_extract/pages/450/
+    - assets/naskh_app_extract/pages/451/
+    - assets/naskh_app_extract/pages/452/
+    - assets/naskh_app_extract/pages/453/
+    - assets/naskh_app_extract/pages/454/
+    - assets/naskh_app_extract/pages/455/
+    - assets/naskh_app_extract/pages/456/
+    - assets/naskh_app_extract/pages/457/
+    - assets/naskh_app_extract/pages/458/
+    - assets/naskh_app_extract/pages/459/
+    - assets/naskh_app_extract/pages/460/
+    - assets/naskh_app_extract/pages/461/
+    - assets/naskh_app_extract/pages/462/
+    - assets/naskh_app_extract/pages/463/
+    - assets/naskh_app_extract/pages/464/
+    - assets/naskh_app_extract/pages/465/
+    - assets/naskh_app_extract/pages/466/
+    - assets/naskh_app_extract/pages/467/
+    - assets/naskh_app_extract/pages/468/
+    - assets/naskh_app_extract/pages/469/
+    - assets/naskh_app_extract/pages/470/
+    - assets/naskh_app_extract/pages/471/
+    - assets/naskh_app_extract/pages/472/
+    - assets/naskh_app_extract/pages/473/
+    - assets/naskh_app_extract/pages/474/
+    - assets/naskh_app_extract/pages/475/
+    - assets/naskh_app_extract/pages/476/
+    - assets/naskh_app_extract/pages/477/
+    - assets/naskh_app_extract/pages/478/
+    - assets/naskh_app_extract/pages/479/
+    - assets/naskh_app_extract/pages/480/
+    - assets/naskh_app_extract/pages/481/
+    - assets/naskh_app_extract/pages/482/
+    - assets/naskh_app_extract/pages/483/
+    - assets/naskh_app_extract/pages/484/
+    - assets/naskh_app_extract/pages/485/
+    - assets/naskh_app_extract/pages/486/
+    - assets/naskh_app_extract/pages/487/
+    - assets/naskh_app_extract/pages/488/
+    - assets/naskh_app_extract/pages/489/
+    - assets/naskh_app_extract/pages/490/
+    - assets/naskh_app_extract/pages/491/
+    - assets/naskh_app_extract/pages/492/
+    - assets/naskh_app_extract/pages/493/
+    - assets/naskh_app_extract/pages/494/
+    - assets/naskh_app_extract/pages/495/
+    - assets/naskh_app_extract/pages/496/
+    - assets/naskh_app_extract/pages/497/
+    - assets/naskh_app_extract/pages/498/
+    - assets/naskh_app_extract/pages/499/
+    - assets/naskh_app_extract/pages/500/
+    - assets/naskh_app_extract/pages/501/
+    - assets/naskh_app_extract/pages/502/
+    - assets/naskh_app_extract/pages/503/
+    - assets/naskh_app_extract/pages/504/
+    - assets/naskh_app_extract/pages/505/
+    - assets/naskh_app_extract/pages/506/
+    - assets/naskh_app_extract/pages/507/
+    - assets/naskh_app_extract/pages/508/
+    - assets/naskh_app_extract/pages/509/
+    - assets/naskh_app_extract/pages/510/
+    - assets/naskh_app_extract/pages/511/
+    - assets/naskh_app_extract/pages/512/
+    - assets/naskh_app_extract/pages/513/
+    - assets/naskh_app_extract/pages/514/
+    - assets/naskh_app_extract/pages/515/
+    - assets/naskh_app_extract/pages/516/
+    - assets/naskh_app_extract/pages/517/
+    - assets/naskh_app_extract/pages/518/
+    - assets/naskh_app_extract/pages/519/
+    - assets/naskh_app_extract/pages/520/
+    - assets/naskh_app_extract/pages/521/
+    - assets/naskh_app_extract/pages/522/
+    - assets/naskh_app_extract/pages/523/
+    - assets/naskh_app_extract/pages/524/
+    - assets/naskh_app_extract/pages/525/
+    - assets/naskh_app_extract/pages/526/
+    - assets/naskh_app_extract/pages/527/
+    - assets/naskh_app_extract/pages/528/
+    - assets/naskh_app_extract/pages/529/
+    - assets/naskh_app_extract/pages/530/
+    - assets/naskh_app_extract/pages/531/
+    - assets/naskh_app_extract/pages/532/
+    - assets/naskh_app_extract/pages/533/
+    - assets/naskh_app_extract/pages/534/
+    - assets/naskh_app_extract/pages/535/
+    - assets/naskh_app_extract/pages/536/
+    - assets/naskh_app_extract/pages/537/
+    - assets/naskh_app_extract/pages/538/
+    - assets/naskh_app_extract/pages/539/
+    - assets/naskh_app_extract/pages/540/
+    - assets/naskh_app_extract/pages/541/
+    - assets/naskh_app_extract/pages/542/
+    - assets/naskh_app_extract/pages/543/
+    - assets/naskh_app_extract/pages/544/
+    - assets/naskh_app_extract/pages/545/
+    - assets/naskh_app_extract/pages/546/
+    - assets/naskh_app_extract/pages/547/
+    - assets/naskh_app_extract/pages/548/
+    - assets/naskh_app_extract/pages/549/
+    - assets/naskh_app_extract/pages/550/
+    - assets/naskh_app_extract/pages/551/
+    - assets/naskh_app_extract/pages/552/
+    - assets/naskh_app_extract/pages/553/
+    - assets/naskh_app_extract/pages/554/
+    - assets/naskh_app_extract/pages/555/
+    - assets/naskh_app_extract/pages/556/
+    - assets/naskh_app_extract/pages/557/
+    - assets/naskh_app_extract/pages/558/
+    - assets/naskh_app_extract/pages/559/
+    - assets/naskh_app_extract/pages/560/
+    - assets/naskh_app_extract/pages/561/
+    - assets/naskh_app_extract/pages/562/
+    - assets/naskh_app_extract/pages/563/
+    - assets/naskh_app_extract/pages/564/
+    - assets/naskh_app_extract/pages/565/
+    - assets/naskh_app_extract/pages/566/
+    - assets/naskh_app_extract/pages/567/
+    - assets/naskh_app_extract/pages/568/
+    - assets/naskh_app_extract/pages/569/
+    - assets/naskh_app_extract/pages/570/
+    - assets/naskh_app_extract/pages/571/
+    - assets/naskh_app_extract/pages/572/
+    - assets/naskh_app_extract/pages/573/
+    - assets/naskh_app_extract/pages/574/
+    - assets/naskh_app_extract/pages/575/
+    - assets/naskh_app_extract/pages/576/
+    - assets/naskh_app_extract/pages/577/
+    - assets/naskh_app_extract/pages/578/
+    - assets/naskh_app_extract/pages/579/
+    - assets/naskh_app_extract/pages/580/
+    - assets/naskh_app_extract/pages/581/
+    - assets/naskh_app_extract/pages/582/
+    - assets/naskh_app_extract/pages/583/
+    - assets/naskh_app_extract/pages/584/
+    - assets/naskh_app_extract/pages/585/
+    - assets/naskh_app_extract/pages/586/
+    - assets/naskh_app_extract/pages/587/
+    - assets/naskh_app_extract/pages/588/
+    - assets/naskh_app_extract/pages/589/
+    - assets/naskh_app_extract/pages/590/
+    - assets/naskh_app_extract/pages/591/
+    - assets/naskh_app_extract/pages/592/
+    - assets/naskh_app_extract/pages/593/
+    - assets/naskh_app_extract/pages/594/
+    - assets/naskh_app_extract/pages/595/
+    - assets/naskh_app_extract/pages/596/
+    - assets/naskh_app_extract/pages/597/
+    - assets/naskh_app_extract/pages/598/
+    - assets/naskh_app_extract/pages/599/
+    - assets/naskh_app_extract/pages/600/
+    - assets/naskh_app_extract/pages/601/
+    - assets/naskh_app_extract/pages/602/
+    - assets/naskh_app_extract/pages/603/
+    - assets/naskh_app_extract/pages/604/
+    - assets/naskh_app_extract/pages/605/
+    - assets/naskh_app_extract/pages/606/
+    - assets/naskh_app_extract/pages/607/
+    - assets/naskh_app_extract/pages/608/
+    - assets/naskh_app_extract/pages/609/
+    - assets/naskh_app_extract/pages/610/
+    - assets/naskh_app_extract/pages/611/
 
   fonts:
     - family: AlQuran

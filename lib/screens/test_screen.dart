@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 import '../widgets/ayah_revision_heatmap.dart';
 import '../widgets/daily_ayah_card.dart';
 import '../widgets/khatim_heatmap.dart';
+import 'naskh_quran_reader_screen.dart';
 import 'pattern_lab_screen.dart';
 import 'surah_patterns_screen.dart';
+import 'zahri_pattern_screen.dart';
 
 class TestScreen extends StatelessWidget {
   const TestScreen({super.key});
@@ -36,6 +38,16 @@ class TestScreen extends StatelessWidget {
             title: 'Pattern Lab',
             description: 'Experiment with Islamic geometric pattern construction',
             onTap: () => _openComponent(context, const PatternLabScreen()),
+          ),
+          _ComponentTile(
+            title: 'Zahri Patterns',
+            description: 'Mathematical Islamic patterns based on Zahri (2019) research paper',
+            onTap: () => _openComponent(context, const ZahriPatternScreen()),
+          ),
+          _ComponentTile(
+            title: 'Naskh Quran Reader',
+            description: 'Full Quran reader with 611 pages, RTL paging, and Surah navigation',
+            onTap: () => _openComponent(context, const NaskhQuranReaderScreen()),
           ),
           _ComponentTile(
             title: 'Ayah Revision Heatmap',
